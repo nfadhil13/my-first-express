@@ -3,9 +3,9 @@ import { AppError, InternalServerError } from '../models/apperror';
 
 export const errorHandler = (
   err: Error,
-  req: Request,
+  _: Request,
   res: Response,
-  next: NextFunction,
+  __: NextFunction,
 ) => {
   console.log('error', err);
   if (err instanceof AppError) {
